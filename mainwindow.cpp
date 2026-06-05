@@ -20,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     jugadorIdle.push_back(QPixmap(":/imagenes/idle_jugador.png").scaledToHeight(40));
 
-    // run (4 frames)
+
     for(short int i = 1; i <= 4; i++){
         jugadorRun.push_back(
             QPixmap(QString(":/imagenes/jugador%1.png").arg(i))
@@ -28,10 +28,10 @@ MainWindow::MainWindow(QWidget *parent)
             );
     }
 
-    // idle
+
     zombieIdle.push_back(QPixmap(":/imagenes/idle_zombie.png").scaledToHeight(40));
 
-    // run (3 frames)
+
     for(short int i = 1; i <= 3; i++){
         zombieRun.push_back(
             QPixmap(QString(":/imagenes/zombie%1.png").arg(i))
@@ -106,31 +106,32 @@ MainWindow::MainWindow(QWidget *parent)
         player->setPosition(0);
     };
 
-    // BOTÓN
+    // Boton
     crearSonido(sClick, aClick, "qrc:/sonidos/boton_menu.wav");
 
-    // JUGADOR
+    // Jugador
     crearSonido(sHitJugador, aHitJugador, "qrc:/sonidos/dano_steve.wav");
 
-    // ENEMIGOS
+    // Enemigos
     crearSonido(sHitZombie, aHitZombie, "qrc:/sonidos/dano_zombie.wav");
     crearSonido(sHitEsqueleto, aHitEsqueleto, "qrc:/sonidos/dano_esqueleto.wav");
 
     crearSonido(sHitWither1, aHitWither1, "qrc:/sonidos/dano_wither1.wav");
     crearSonido(sHitWither2, aHitWither2, "qrc:/sonidos/dano_wither2.wav");
 
-    // DISPAROS
+    // Disparos
     crearSonido(sDisparoEsqueleto, aDisparoEsqueleto, "qrc:/sonidos/disparo_esqueleto.wav");
     crearSonido(sDisparoWither, aDisparoWither, "qrc:/sonidos/disparo_wither.wav");
 
-    // MUERTES
+    // Muertes
     crearSonido(sMuerteZombie, aMuerteZombie, "qrc:/sonidos/derrota_zombie.wav");
     crearSonido(sMuerteEsqueleto, aMuerteEsqueleto, "qrc:/sonidos/derrota_esqueleto.wav");
     crearSonido(sMuerteWither, aMuerteWither, "qrc:/sonidos/derrota_wither.wav");
 
-
+    //Spawn
     crearSonido(sSpawnBoss, aSpawnBoss, "qrc:/sonidos/Wither_spawn.wav");
 
+    //Fase 2 wither y dash
     crearSonido(sFase2Boss, aFase2Boss, "qrc:/sonidos/wither_fase2.wav");
     crearSonido(sDashBoss, aDashBoss, "qrc:/sonidos/dashjefe.wav");
 
@@ -403,11 +404,8 @@ void MainWindow::crearPantallas(){
     pantallaInicio->setLayout(layoutInicio);
 
 
-    // =========================
+
     // PANTALLA SELECCIÓN
-    // =========================
-
-
 
     pantallaSeleccion = new QWidget();
     QVBoxLayout *layoutSel = new QVBoxLayout();
@@ -420,7 +418,7 @@ void MainWindow::crearPantallas(){
     QPixmap imgSel(":/imagenes/fondo_inicio.jpg");
     fondoSel->setPixmap(imgSel);
 
-    // layout encima del fondo
+
     QVBoxLayout* overlaySel = new QVBoxLayout(fondoSel);
 
     btnFacil = new QPushButton("Facil");
@@ -441,9 +439,9 @@ void MainWindow::crearPantallas(){
     pantallaSeleccion->setLayout(layoutSel);
 
 
-    // =========================
+
     // PANTALLA JUEGO
-    // =========================
+
     pantallaJuego = new QWidget();
     QVBoxLayout *layoutJuego = new QVBoxLayout();
 
@@ -462,9 +460,9 @@ void MainWindow::crearPantallas(){
     pantallaJuego->setLayout(layoutJuego);
 
 
-    // =========================
+
     // GAME OVER
-    // =========================
+
 
     pantallaGameOver = new QWidget();
     QVBoxLayout *layoutOver = new QVBoxLayout();
@@ -506,12 +504,7 @@ void MainWindow::crearPantallas(){
     layoutOver->addWidget(fondoOver);
     pantallaGameOver->setLayout(layoutOver);
 
-
-    // =========================
     // VICTORIA
-    // =========================
-
-
 
     pantallaVictoria = new QWidget();
     QVBoxLayout *layoutVic = new QVBoxLayout();
@@ -553,13 +546,12 @@ void MainWindow::crearPantallas(){
     layoutVic->addWidget(fondoVic);
     pantallaVictoria->setLayout(layoutVic);
 
-    // =========================
     // PANTALLA PAUSA
-    // =========================
+
     pantallaPausa = new QWidget();
     QVBoxLayout *layoutPausa = new QVBoxLayout();
 
-    // fondo
+
     QLabel* fondoPausa = new QLabel();
     fondoPausa->setScaledContents(true);
 
@@ -592,9 +584,9 @@ void MainWindow::crearPantallas(){
     pantallaPausa->setLayout(layoutPausa);
 
 
-    // =========================
+
     // PANTALLA CARGA
-    // =========================
+
     pantallaCarga = new QWidget();
 
     QVBoxLayout* layoutCarga = new QVBoxLayout();
@@ -618,9 +610,9 @@ void MainWindow::crearPantallas(){
     pantallaCarga->setStyleSheet("background-color: black;");
 
 
-    // =========================
+
     // PANTALLA AYUDA
-    // =========================
+
 
     pantallaAyuda = new QWidget();
     QVBoxLayout *layoutAyuda = new QVBoxLayout();
@@ -633,21 +625,6 @@ void MainWindow::crearPantallas(){
 
 
     QVBoxLayout* overlayAyuda = new QVBoxLayout(fondoAyuda);
-
-
-    /*QLabel* textoAyuda = new QLabel(
-        "OBJETIVO:\n"
-        "- Elimina enemigos\n"
-        "- Llega al jefe\n\n"
-        "CONTROLES:\n"
-        "- Movimiento: WASD\n"
-        "- Disparo: Clic izquierdo\n\n"
-        "CONSEJO:\n"
-        "- Esquiva los dashes del jefe"
-        );
-
-    textoAyuda->setStyleSheet("color: white; font-size: 16px;");
-    textoAyuda->setAlignment(Qt::AlignCenter);*/
 
     QLabel* textoAyuda = new QLabel(
         "<h2 style='color:white;'>OBJETIVO</h2>"
@@ -705,9 +682,9 @@ void MainWindow::crearPantallas(){
 
 
 
-    // =========================
+
     // STACK
-    // =========================
+
 
     stack->addWidget(pantallaInicio);    // 0
     stack->addWidget(pantallaSeleccion); // 1
@@ -741,9 +718,9 @@ void MainWindow::conectarBotones(){
         this->close();
     });
 
-    // =========================
+
     // DIFICULTAD
-    // =========================
+
 
     connect(btnFacil, &QPushButton::clicked, this, [=](){
 
@@ -795,9 +772,9 @@ void MainWindow::conectarBotones(){
 
     });
 
-    // =========================
+
     // DERROTA
-    // =========================
+
 
     connect(btnReiniciar, &QPushButton::clicked, this, [=](){
 
@@ -850,9 +827,9 @@ void MainWindow::conectarBotones(){
         nivelConectado = false;
     });
 
-    // =========================
+
     // VICTORIA
-    // =========================
+
 
     connect(btnReiniciarVic, &QPushButton::clicked, this, [=](){
 
@@ -904,9 +881,9 @@ void MainWindow::conectarBotones(){
         nivelConectado = false;
     });
 
-    // =========================
+
     // PAUSA
-    // =========================
+
 
     connect(btnContinuar, &QPushButton::clicked, this, [=](){
 
@@ -1170,7 +1147,6 @@ void MainWindow::renderEnemigos(vector<enemigo*>& enemigos, jugador& jug){
                 t.translate(frame.width(), 0);
                 t.scale(-1, 1);
             }
-            qDebug() << "mirandoDerecha:" << e->estaMirandoDerecha();
 
             item->setTransform(t);
 

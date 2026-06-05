@@ -128,3 +128,5 @@ QPixmap enemigo::getFrame(
 }
 
 bool enemigo::estaMirandoDerecha(){return mirandoDerecha;}
+
+

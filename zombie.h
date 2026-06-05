@@ -13,8 +13,6 @@ public:
     short int getTipo() override;
 
 
-
-
 };
 
 #endif // ZOMBIE_H

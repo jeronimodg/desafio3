@@ -233,5 +233,3 @@ void wither::setDashesRestantes(short int d){
 void wither::setVidaMaxima(short vidmax){vidaMax = vidmax;}
 
 short int wither::getDashesRestantes(){ return dashesRestantes; }
-
-

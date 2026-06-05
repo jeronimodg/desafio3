@@ -62,7 +62,6 @@ public:
     short int getDashesRestantes();
 
 
-
 };
 
 #endif

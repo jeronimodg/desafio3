@@ -37,17 +37,13 @@ void pocion::update(){
     tiempoAnim += 0.05f;
 }
 
-/*bool pocion::colision(jugador& j){
 
-    return (j.getX() >= x - 10 && j.getX() <= x + 10 &&
-            j.getY() >= y - 10 && j.getY() <= y + 10);
-}*/
 
 bool pocion::colision(jugador& j){
 
     float px = x;
     float py = y;
-    float pw = 20; // ancho pocion
+    float pw = 20;
     float ph = 20;
 
     float jx = j.getX();

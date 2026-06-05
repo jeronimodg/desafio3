@@ -104,7 +104,18 @@ void nivel::actualizarEntidades(){
 
                 float dist = sqrt(dx*dx + dy*dy);
 
-                if(dist < 25){
+                if((dist < 26 && e->getTipo() != 3) ){
+                    if(e->getActiva()){
+                        emit enemigoDano(e->getTipo());
+
+                        e->recibirDanio(jug.getDanoActual());
+                    }
+
+                    p->setActiva(false);
+                    break;
+                }
+                if(dist < 40 && e->getTipo() == 3){
+
                     if(e->getActiva()){
                         emit enemigoDano(e->getTipo());
 

@@ -61,6 +61,7 @@ public:
         );
 
     bool estaMirandoDerecha();
+
 };
 
 #endif

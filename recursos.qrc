@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imagenes/fondo_cargando.gif</file>
+        <file>imagenes/candidato_boss.jpg</file>
+        <file>imagenes/candidato_pasillo.jpg</file>
+        <file>imagenes/candidato_transicion.jpg</file>
+        <file>imagenes/fondo_inicio.jpg</file>
+        <file>imagenes/fondo_derrota.jpg</file>
+        <file>imagenes/fondo_victoria.jpg</file>
+        <file>imagenes/Udeacraft.jpg</file>
+        <file>imagenes/gameover.jpg</file>
+        <file>imagenes/victory.jpg</file>
+        <file>imagenes/candidato_plataforma.png</file>
+        <file>imagenes/pocion_curar.png</file>
+        <file>imagenes/pocion_fuerza.png</file>
+        <file>imagenes/pocion_inmunidad.png</file>
+        <file>imagenes/pocion_lentitud.png</file>
+        <file>imagenes/pocion_velocidad.png</file>
+        <file>imagenes/ataque_jugador.png</file>
+        <file>imagenes/ataque_wither.png</file>
+        <file>imagenes/prueba_flecha.png</file>
+        <file>imagenes/posible_esqueleto.png</file>
+        <file>imagenes/posible_fase2_wither.png</file>
+        <file>imagenes/posible_wither.png</file>
+        <file>imagenes/posible_dash_wither.png</file>
+        <file>imagenes/posible_portal.png</file>
+        <file>imagenes/idle_jugador.png</file>
+        <file>imagenes/idle_zombie.png</file>
+        <file>imagenes/jugador1.png</file>
+        <file>imagenes/jugador2.png</file>
+        <file>imagenes/zombie1.png</file>
+        <file>imagenes/zombie2.png</file>
+        <file>imagenes/zombie3.png</file>
+        <file>imagenes/jugador3.png</file>
+        <file>imagenes/jugador4.png</file>
+    </qresource>
+</RCC>

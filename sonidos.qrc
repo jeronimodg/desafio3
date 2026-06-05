@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>sonidos/boton_menu.wav</file>
+        <file>sonidos/dano_esqueleto.wav</file>
+        <file>sonidos/dano_steve.wav</file>
+        <file>sonidos/dano_wither1.wav</file>
+        <file>sonidos/dano_wither2.wav</file>
+        <file>sonidos/dano_zombie.wav</file>
+        <file>sonidos/derrota_esqueleto.wav</file>
+        <file>sonidos/derrota_wither.wav</file>
+        <file>sonidos/derrota_zombie.wav</file>
+        <file>sonidos/disparo_esqueleto.wav</file>
+        <file>sonidos/disparo_wither.wav</file>
+        <file>sonidos/Wither_spawn.wav</file>
+        <file>sonidos/dashjefe.wav</file>
+        <file>sonidos/wither_fase2.wav</file>
+        <file>sonidos/aria_math.mp3</file>
+        <file>sonidos/moog_city.mp3</file>
+        <file>sonidos/dry_hands.mp3</file>
+    </qresource>
+</RCC>

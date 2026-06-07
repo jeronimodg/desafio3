@@ -13,30 +13,44 @@ find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets Multimedia)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Multimedia)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
+        src/main.cpp
+        src/mainwindow.cpp
+        src/mainwindow.h
+        src/mainwindow.ui
+        src/jugador.h
+        src/jugador.cpp
+        src/juego.h
+        src/juego.cpp
+        src/entidad.h
+        src/entidad.cpp
+        src/enemigo.h
+        src/enemigo.cpp
+        src/esqueleto.h
+        src/esqueleto.cpp
+        src/zombie.h
+        src/zombie.cpp
+        src/wither.h
+        src/wither.cpp
+        src/proyectil.h
+        src/proyectil.cpp
+        src/plataforma.h
+        src/plataforma.cpp
+        src/pocion.h
+        src/pocion.cpp
+        src/nivel.h
+        src/nivel.cpp
+        src/nivelpasillo.h
+        src/nivelpasillo.cpp
+        src/niveltransicion.h
+        src/niveltransicion.cpp
+        src/nivelboss.h
+        src/nivelboss.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(DesafioIII
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        entidad.h entidad.cpp
-        jugador.h jugador.cpp
-        proyectil.h proyectil.cpp
-        enemigo.h enemigo.cpp
-        nivel.h nivel.cpp
-        nivelpasillo.h nivelpasillo.cpp
-        pocion.h pocion.cpp
-        nivelboss.h nivelboss.cpp
-        juego.h juego.cpp
-        plataforma.h plataforma.cpp
-        wither.h wither.cpp
-        esqueleto.h esqueleto.cpp
-        zombie.h zombie.cpp
-        niveltransicion.h niveltransicion.cpp
         recursos.qrc
         sonidos.qrc
 

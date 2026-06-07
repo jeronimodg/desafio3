@@ -86,9 +86,6 @@ void jugador::update(){
         tiempoInmunidad -= 0.7f;
     }
 
-
-
-
 }
 
 void jugador::moverIzquierda(){
